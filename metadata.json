@@ -1,0 +1,6 @@
+{
+  "name": "SatuCerita Planner",
+  "description": "Aplikasi wedding planner cerdas dengan dual-management pihak pria dan wanita, generator undangan digital adat, pelacakan budget transparan, checklist tersinkronisasi, rundown interaktif, dan koordinasi vendor real-time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
