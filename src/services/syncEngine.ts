@@ -23,7 +23,7 @@ export function getDeviceId(): string {
 let broadcastChannel: BroadcastChannel | null = null;
 try {
   if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
-    broadcastChannel = new BroadcastChannel('janjisuci_wedding_sync_channel');
+    broadcastChannel = new BroadcastChannel('satucerita_wedding_sync_channel');
   }
 } catch (e) {
   console.warn('BroadcastChannel not supported in this environment');
@@ -44,7 +44,7 @@ if (broadcastChannel) {
 // Also listen to storage events across tabs as fallback
 if (typeof window !== 'undefined') {
   window.addEventListener('storage', (e) => {
-    if (e.key === 'janjisuci_wedding_cross_device_signal' && e.newValue) {
+    if (e.key === 'satucerita_wedding_cross_device_signal' && e.newValue) {
       try {
         const payload: SyncPayload = JSON.parse(e.newValue);
         if (payload.sourceDeviceId !== getDeviceId()) {
@@ -112,7 +112,7 @@ export function broadcastWeddingUpdate(
 
   // Set localStorage signal for storage event listener fallback
   try {
-    localStorage.setItem('janjisuci_wedding_cross_device_signal', JSON.stringify(payload));
+    localStorage.setItem('satucerita_wedding_cross_device_signal', JSON.stringify(payload));
   } catch (err) {
     // ignore
   }

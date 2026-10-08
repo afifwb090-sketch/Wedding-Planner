@@ -23,6 +23,7 @@ import {
   initialNotes,
   initialWishes,
   initialInvitationConfig,
+  clearAllPlannerData,
   loadData,
   saveData,
 } from './services/storage';
@@ -436,6 +437,7 @@ export default function App() {
   };
 
   const handleResetToDemoData = () => {
+    clearAllPlannerData();
     setProfile(initialProfile);
     setChecklists([]);
     setGuests([]);

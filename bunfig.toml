@@ -1,0 +1,4 @@
+[install]
+lockfile = true
+production = false
+exact = false
